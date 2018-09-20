@@ -39,3 +39,4 @@ Alors qu'en ce moment, Home Credit utilise diverses méthode statistiques et des
 
 * **HomeCredit_columns_description.csv**
   * This file contains descriptions for the columns in the various data files.
+
