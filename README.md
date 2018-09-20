@@ -13,12 +13,11 @@ Alors qu'en ce moment, Home Credit utilise diverses méthode statistiques et des
   * Static data for all applications. One row represents one loan in our data sample.
 
 * **bureau.csv**
-
-All client's previous credits provided by other financial institutions that were reported to Credit Bureau (for clients who have a loan in our sample).
-For every loan in our sample, there are as many rows as number of credits the client had in Credit Bureau before the application date.
-bureau_balance.csv
-
-* Monthly balances of previous credits in Credit Bureau.
+  * All client's previous credits provided by other financial institutions that were reported to Credit Bureau (for clients who have a loan in our sample).
+  * For every loan in our sample, there are as many rows as number of credits the client had in Credit Bureau before the application date.
+  
+* **bureau_balance.csv**
+  * Monthly balances of previous credits in Credit Bureau.
 This table has one row for each month of history of every previous credit reported to Credit Bureau – i.e the table has (#loans in sample * # of relative previous credits * # of months where we have some history observable for the previous credits) rows.
 POS_CASH_balance.csv
 
