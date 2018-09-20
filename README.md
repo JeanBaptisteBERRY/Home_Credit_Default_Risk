@@ -9,8 +9,7 @@ Alors qu'en ce moment, Home Credit utilise diverses méthode statistiques et des
 # Description des données
 
 * **application_{train|test}.csv**
-
-** This is the main table, broken into two files for Train (with TARGET) and Test (without TARGET).
+  * This is the main table, broken into two files for Train (with TARGET) and Test (without TARGET).
 Static data for all applications. One row represents one loan in our data sample.
 bureau.csv
 
