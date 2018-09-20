@@ -10,8 +10,9 @@ Alors qu'en ce moment, Home Credit utilise diverses méthode statistiques et des
 
 * **application_{train|test}.csv**
   * This is the main table, broken into two files for Train (with TARGET) and Test (without TARGET).
-Static data for all applications. One row represents one loan in our data sample.
-bureau.csv
+  * Static data for all applications. One row represents one loan in our data sample.
+
+* **bureau.csv**
 
 All client's previous credits provided by other financial institutions that were reported to Credit Bureau (for clients who have a loan in our sample).
 For every loan in our sample, there are as many rows as number of credits the client had in Credit Bureau before the application date.
