@@ -43,3 +43,7 @@ Alors qu'en ce moment, Home Credit utilise diverses méthode statistiques et des
  # Schéma Global :
 
 ![image](home_credit.png)
+
+Les fichiers installments_payments, POS_CASH_BALANCE et previo_application sont à télécharger (trop lours pour être uploader sur github)  en allant sur le lien suivant : https://www.kaggle.com/c/home-credit-default-risk/data
+
+
