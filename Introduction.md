@@ -24,16 +24,16 @@ Traditionnellement, le crédit est utilisé par les entreprises ou les particuli
 
 ### Data
 
-Les données sont fournies par Home Credit, un service dédié à fournir des (lignes de) crédits (prêts bancaires) à une population non bancarisée. Réussir à prédire si un client sera capable de recouvrir ou aura des difficultés à recouvrir son prêt est un besoin commercial critique et Home Credit propose cette compétition pour voir quelles sortes de modèles la communauté ML peut mettre au point pour les accompagner et les aider dans leurs tâches.
+Les données sont fournies par Home Credit, un service dédié à fournir des prêts bancaires à une population non bancarisée. Réussir à prédire si un client sera capable de recouvrir ou aura des difficultés à recouvrir son prêt est un besoin commercial critique et Home Credit propose cette compétition pour voir quelles sortes de modèles la communauté ML peut mettre au point pour les accompagner et les aider dans leurs tâches.
 
 On rappelle que les 7 différents types de données sont :
 
 * **application_train/application_test:** Les principales données d'entraînement et de test avec des informations sur chaque prêt souscrit auprès d'Home Credit. Chaque prêt a sa propre ligne / donnée et est identifié grâce à la varaible SK_ID_CURR. Les données d'entraînement contienne la variable cible qui indique 0 si le prêt a été recouvert et 1 si le prêt ne l'a pas été.
-* **bureau:** Les données concernant les crédit précedemment souscrits par le client dans d'autres institutions financières. Chaque crédit préccédemment souscrit a sa ligne dans le fichier bureau mais attention : 
+* **bureau:** Les données concernant les crédit précedemment souscrits par le client dans d'autres institutions financières. Chaque crédit préccédemment souscrit a sa ligne dans le fichier bureau mais attention : chaque crédit précédemment souscrit a sa propre ligne dans 'bureau' mais un prêt dans 'application' peut avoir plusieurs crédits souscrits précédemment (dans le passé).
+* **bureau_balance:** Les données mensuelles concernant les les crédits souscrits précédemment. Chaque ligne correspond à la balance d'un mois d'un crédit précédent. On en déduit qu'un seu crédit précédemment souscrit peut avoir plusieurs lignes dans ce fichier, un pour chaque mois de la durée totale du crédit précédemment souscrit par le client.
+* **previous_application:** les souscriptions précédentes pour prêt à Home Credit des clients qui ont un prêt dans 'application'. Chaque prêt en cours dans 'application' peut avoir plusieurs précédents prêts souscrits dans le passé. Chaque prêt souscrit dans le passé correspond à une ligne et est identifié par la variable SK_ID_PREV.
+* **POS_CASH_BALANCE:** Les données mensuelles concernant des précédents 
 
-Each previous credit has its own row in bureau, but one loan in the application data can have multiple previous credits.
-bureau_balance: monthly data about the previous credits in bureau. Each row is one month of a previous credit, and a single previous credit can have multiple rows, one for each month of the credit length.
-previous_application: previous applications for loans at Home Credit of clients who have loans in the application data. Each current loan in the application data can have multiple previous loans. Each previous application has one row and is identified by the feature SK_ID_PREV.
-POS_CASH_BALANCE: monthly data about previous point of sale or cash loans clients have had with Home Credit. Each row is one month of a previous point of sale or cash loan, and a single previous loan can have many rows.
+monthly data about previous point of sale or cash loans clients have had with Home Credit. Each row is one month of a previous point of sale or cash loan, and a single previous loan can have many rows.
 credit_card_balance: monthly data about previous credit cards clients have had with Home Credit. Each row is one month of a credit card balance, and a single credit card can have many rows.
 installments_payment: payment history for previous loans at Home Credit. There is one row for every made payment and one row for every missed payment.
