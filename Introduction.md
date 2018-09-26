@@ -35,3 +35,25 @@ On rappelle que les 7 différents types de données sont :
 * **POS_CASH_BALANCE:** Les données mensuelles concernant des précédentes transactions associées à des terminaux de points de ventes (TPV) ou à un prêt cash dans le passé (cash loan en anglais aussi connu comme payday loan; il s'agit d'une forme de prêt de petit montant, à court terme, pas très fiable, avec intérêt élévé qui en général est remboursé au prochain salaire reçu par l'emprunteur) ont eu chez Home Credit. Chaque ligne correspond à un mois d'une précédente transaction associée à un TPV et  un prêt dans 'application' peut avoir plusieurs noeuds / lignes dans 'POS_CASH_BALANCE'.
 * **credit_card_balance:** Les données / la balance mensuelles associées à des cartes de crédit précédemment souscrites par des clients. Chaque noeud / ligne correspond à la balance d'un mois d'une carte de crédit et donc ,une seule carte de crédit peut avoir plusieurs noeuds / lignes.
 * **installments_payment:** historique de paiement des précédents prêts bancaires chez Home Credit. Il y a un noeud pour chaque paiement effectué et une ligne pour chaque échéance ratée.
+
+Moreover, we are provided with the definitions of all the columns (in HomeCredit_columns_description.csv) and an example of the expected submission file.
+
+In this notebook, we will stick to using only the main application training and testing data. Although if we want to have any hope of seriously competing, we need to use all the data, for now we will stick to one file which should be more manageable. This will let us establish a baseline that we can then improve upon. With these projects, it's best to build up an understanding of the problem a little at a time rather than diving all the way in and getting completely lost!
+
+Metric: ROC AUC
+Once we have a grasp of the data (reading through the column descriptions helps immensely), we need to understand the metric by which our submission is judged. In this case, it is a common classification metric known as the Receiver Operating Characteristic Area Under the Curve (ROC AUC, also sometimes called AUROC).
+
+The ROC AUC may sound intimidating, but it is relatively straightforward once you can get your head around the two individual concepts. The Reciever Operating Characteristic (ROC) curve graphs the true positive rate versus the false positive rate:
+
+https://www.kaggle.com/willkoehrsen/start-here-a-gentle-introduction
+
+
+
+
+
+
+
+
+
+
+
