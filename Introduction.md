@@ -20,7 +20,7 @@ Avant de commencer il convient de bien comprendre la différence entre un prêt 
 * **Les intérêts :** Ceux-ci sont générés par paliers en fonction du montant du retrait. Par exemple, si lors d’un retrait de 50 euros, vos intérêts sont de 4 euros, à partir de 80 euros de retrait, les intérêts pourraient s’élever à 12 euros, et ainsi de suite.
 * **Le remboursement :** Le remboursement est mensuel et automatique. Généralement le 1er du mois, il correspond à la somme utilisée avec les intérêts.
 
-Traditionnellement, le crédit est utilisé par les entreprises ou les particuliers pour couvrir des périodes de manque de liquidité ou le financement de certaines activités commerciales alors que les prêts sont plutôt destinés à un financement plus commun dans le but d’acquérir certains biens de consommations comme un ordinateur, une voiture ou un bien immobilier par exempl
+Traditionnellement, le crédit est utilisé par les entreprises ou les particuliers pour couvrir des périodes de manque de liquidité ou le financement de certaines activités commerciales alors que les prêts sont plutôt destinés à un financement plus commun dans le but d’acquérir certains biens de consommations comme un ordinateur, une voiture ou un bien immobilier par exemple.
 
 ### Data
 
@@ -57,11 +57,7 @@ Un modèle qui devine au hasard a un ROC AUC de 0.5.
 
 Quand on évalue la performance d'un classifieur en se basant sur la métrique ROC AUC, on ne génère pas des prédictions de 0 et 1 mais plusu ne probabilité entre 0 et 1. Cela est assez confusant par ce qu'on pense très souvent en terme de précision (accuracy), mais quand on rentre dans des problèmes avec des classes réparties inégalement ('nbalanced classes'; nous verrons que c'est le cas ici), la précision / accuracy n'est pas la meilleure métrique. Par exemple, si je désire mettre au point un modèle qui détecte les terroristes avec 99.9999% de précision, je peux simplement créer un modèle qui prédit que chaque personne n'est pas un terroriste. Clairement, ce ne serait pas efficace (le rappel serait nul voir https://fr.wikipedia.org/wiki/Pr%C3%A9cision_et_rappel) et dans ce cas, on utilise des métriques plus avancées comme le ROC AUC ou le F1 score pour mieux refléter la performance d'un classifieur. Un modèle avec une ROC AUC élevée aura aussi une précision élevée, mais la ROC AUC est une meilleure représentation de la performance d'un modèle. 
 
-Not that we know the background of the data we are using and the metric to maximize, let's get into exploring the data. In this notebook, as mentioned previously, we will stick to the main data sources and simple models which we can build upon in future work.
-
-
-
-
+Maintenant qu'on en sait plus sur les données à exploiter et la métrique à maximiser, allons explorer nos données (réaliser le feature engineering). Dans le notebook "NOM", comme mentionné précédemment, nous nous concentrerons sur la principal source de données 'application_train' et sur de simples modèles sur lesquels viendront s'appuyer notre futur travail, future avancée.
 
 https://www.kaggle.com/willkoehrsen/start-here-a-gentle-introduction
 
