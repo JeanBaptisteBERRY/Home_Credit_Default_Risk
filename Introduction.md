@@ -1,6 +1,6 @@
 # INTRODUCTION
 
-Dans le notebook "NOM", nous étudierons dans un premier temps, la compétition Machine Learning "Home Credit Default Risk". L'objectif de cette compétition est d'utiliser des données issues d'historiques de demandes de prêts pour prédire si un client va être capable de recouvrir ou non son prêt bancaire. Le premiers élément que l'on déduit assez rapidement est le fait qu'il s'agit d'un tâche standard de classification de ML supervisé :
+Dans le notebook "Introduction-HCDR.ipynb", nous étudierons dans un premier temps, la compétition Machine Learning "Home Credit Default Risk". L'objectif de cette compétition est d'utiliser des données issues d'historiques de demandes de prêts pour prédire si un client va être capable de recouvrir ou non son prêt bancaire. Le premiers élément que l'on déduit assez rapidement est le fait qu'il s'agit d'un tâche standard de classification de ML supervisé :
 * **Supervisé :** les labels sont inclus dans les données d'entraînement et l'objectif est d'entraîner un modèle capable d'apprendre à prédire les labels à partir des features (variables; N.B : Features are the variables found in the given problem set that can strongly/sufficiently help us build an accurate predictive model.)
 * **Classification :** Le label est une variable binaire : O (sera capable de recouvrir son prêt dans les temps) et 1 (aura des difficultés à recouvrir le prêt).
 
@@ -38,7 +38,7 @@ On rappelle que les 7 différents types de données sont :
 
 En outre, les définitions de toutes les colonnes nous sont founies(dans 'HomeCredit_columns_description.csv') et un exemple du fichier à soumettre.
 
-Dans le notebook "NOM", nous utiliserons uniquement pour l'instant les données d'entraînement et les données de test. Maintenant, si on veut vraiment pouvoir réaliser des modèles précis, nous avons plutôt intérêt à utiliser toutes les données. Pour l'instant, nous nous concentrerons sur un seul fichier. Cela nous permettra d'établir un 'fil rouge' de base qu'on pourra par la suite améliorer. C'est mieux de prendre le problème petit bout par petit bout que de plonger directement dedans et d'être complètement perdu.
+Dans le notebook "Introduction-HCDR.ipynb", nous utiliserons uniquement pour l'instant les données d'entraînement et les données de test. Maintenant, si on veut vraiment pouvoir réaliser des modèles précis, nous avons plutôt intérêt à utiliser toutes les données. Pour l'instant, nous nous concentrerons sur un seul fichier. Cela nous permettra d'établir un 'fil rouge' de base qu'on pourra par la suite améliorer. C'est mieux de prendre le problème petit bout par petit bout que de plonger directement dedans et d'être complètement perdu.
 
 ### Rappel : Metric: ROC AUC
 
@@ -57,7 +57,7 @@ Un modèle qui devine au hasard a un ROC AUC de 0.5.
 
 Quand on évalue la performance d'un classifieur en se basant sur la métrique ROC AUC, on ne génère pas des prédictions de 0 et 1 mais plusu ne probabilité entre 0 et 1. Cela est assez confusant par ce qu'on pense très souvent en terme de précision (accuracy), mais quand on rentre dans des problèmes avec des classes réparties inégalement ('nbalanced classes'; nous verrons que c'est le cas ici), la précision / accuracy n'est pas la meilleure métrique. Par exemple, si je désire mettre au point un modèle qui détecte les terroristes avec 99.9999% de précision, je peux simplement créer un modèle qui prédit que chaque personne n'est pas un terroriste. Clairement, ce ne serait pas efficace (le rappel serait nul voir https://fr.wikipedia.org/wiki/Pr%C3%A9cision_et_rappel) et dans ce cas, on utilise des métriques plus avancées comme le ROC AUC ou le F1 score pour mieux refléter la performance d'un classifieur. Un modèle avec une ROC AUC élevée aura aussi une précision élevée, mais la ROC AUC est une meilleure représentation de la performance d'un modèle. 
 
-Maintenant qu'on en sait plus sur les données à exploiter et la métrique à maximiser, allons explorer nos données (réaliser le feature engineering). Dans le notebook "NOM", comme mentionné précédemment, nous nous concentrerons sur la principal source de données 'application_train' et sur de simples modèles sur lesquels viendront s'appuyer notre futur travail, future avancée.
+Maintenant qu'on en sait plus sur les données à exploiter et la métrique à maximiser, allons explorer nos données (réaliser le feature engineering). Dans le notebook "Introduction-HCDR.ipynb", comme mentionné précédemment, nous nous concentrerons sur la principal source de données 'application_train' et sur de simples modèles sur lesquels viendront s'appuyer notre futur travail, future avancée.
 
 https://www.kaggle.com/willkoehrsen/start-here-a-gentle-introduction
 
