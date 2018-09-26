@@ -42,6 +42,26 @@ Dans le notebook "NOM", nous utiliserons uniquement pour l'instant les données 
 
 ### Rappel : Metric: ROC AUC
 
+Après avoir prix connaissance de toutes les données, lire 'HomeCredit_columns_description.csv' nous aide beaucoup. Il faut comprendre la métrique avec laquelle notre soumission va être évaluée. Dans notre cas, il s'agira d'une métrique de classification très commune, le Receiver Operating Characteristic Area Under the Curve (ROC AUC, parfois appelé également AUROC).
+
+Le Reciever Operating Characteristic (ROC) donne le taux de vrais positifs (fraction des positifs qui sont effectivement détectés) en fonction du taux de faux positifs (fraction des négatifs qui sont incorrectement détectés) : 
+
+![image](ROC-curve.png)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 Once we have a grasp of the data (reading through the column descriptions helps immensely), we need to understand the metric by which our submission is judged. In this case, it is a common classification metric known as the Receiver Operating Characteristic Area Under the Curve (ROC AUC, also sometimes called AUROC).
 
 The ROC AUC may sound intimidating, but it is relatively straightforward once you can get your head around the two individual concepts. The Reciever Operating Characteristic (ROC) curve graphs the true positive rate versus the false positive rate:
