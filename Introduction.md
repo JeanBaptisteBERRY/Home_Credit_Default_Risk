@@ -53,7 +53,7 @@ Une courbe sur ce graphe (comme la courbe bleue ou rouge) représente un seul mo
 L'AUC est donc l'intégral de la courbe. Cette métrique est comprise entre 0 et 1. Plus l'AUC est proche de 1, plus le modèle est précis.
 Un modèle qui devine au hasard a un ROC AUC de 0.5.
 
----Attention :---
+--- Attention : ---
 When we measure a classifier according to the ROC AUC, we do not generation 0 or 1 predictions, but rather a probability between 0 and 1. This may be confusing because we usually like to think in terms of accuracy, but when we get into problems with inbalanced classes (we will see this is the case), accuracy is not the best metric. For example, if I wanted to build a model that could detect terrorists with 99.9999% accuracy, I would simply make a model that predicted every single person was not a terrorist. Clearly, this would not be effective (the recall would be zero) and we use more advanced metrics such as ROC AUC or the F1 score to more accurately reflect the performance of a classifier. A model with a high ROC AUC will also have a high accuracy, but the ROC AUC is a better representation of model performance.
 
 Not that we know the background of the data we are using and the metric to maximize, let's get into exploring the data. In this notebook, as mentioned previously, we will stick to the main data sources and simple models which we can build upon in future work.
