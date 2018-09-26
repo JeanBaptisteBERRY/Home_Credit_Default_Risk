@@ -42,29 +42,25 @@ Dans le notebook "NOM", nous utiliserons uniquement pour l'instant les données 
 
 ### Rappel : Metric: ROC AUC
 
-Après avoir prix connaissance de toutes les données, lire 'HomeCredit_columns_description.csv' nous aide beaucoup. Il faut comprendre la métrique avec laquelle notre soumission va être évaluée. Dans notre cas, il s'agira d'une métrique de classification très commune, le Receiver Operating Characteristic Area Under the Curve (ROC AUC, parfois appelé également AUROC).
+Après avoir prix connaissance de toutes les données, lire 'HomeCredit_columns_description.csv' nous aide beaucoup. Il faut comprendre la métrique avec laquelle notre soumission va être évaluée. Dans notre cas, il s'agira d'une métrique de classification très commune, le Receiver Operating Characteristic Area Under the Curve (ROC AUC, parfois appelé également AUROC). 
 
 Le Reciever Operating Characteristic (ROC) donne le taux de vrais positifs (fraction des positifs qui sont effectivement détectés) en fonction du taux de faux positifs (fraction des négatifs qui sont incorrectement détectés) : 
 
 ![image](ROC-curve.png)
 
+Une courbe sur ce graphe (comme la courbe bleue ou rouge) représente un seul modèle de ML. Le seuil (N.B (en anglais) a treshold; All the positive values above the threshold will be “True Positives” and the negative values above the threshold will be “False Positives” as they are predicted incorrectly as positives.) vaut 0 dans le coin droite en haut et augmente jusqu'à valoir 1 au coin gauche en bas du graphique. Plus un modèle a une AUC (Area Under The Curve) élevée, plus le modèlee est précis / mieux. Par exemple, le modèle bleu est meilleur que le modèle rouge qui est meilleur que la diagonale noire qui indique un modèle aléatoire naïf. La diagonale divise l'espace du ROC : les points au-dessus de la diagonale représente des bons résultats de  classification (mieux que le hasard) et les points en dessous de la diagonale représente de mauvais résultats de  classification (pire que le hasard).
+
+L'AUC est donc l'intégral de la courbe. Cette métrique est comprise entre 0 et 1. Plus l'AUC est proche de 1, plus le modèle est précis.
+Un modèle qui devine au hasard a un ROC AUC de 0.5.
+
+__Attention :__ 
+When we measure a classifier according to the ROC AUC, we do not generation 0 or 1 predictions, but rather a probability between 0 and 1. This may be confusing because we usually like to think in terms of accuracy, but when we get into problems with inbalanced classes (we will see this is the case), accuracy is not the best metric. For example, if I wanted to build a model that could detect terrorists with 99.9999% accuracy, I would simply make a model that predicted every single person was not a terrorist. Clearly, this would not be effective (the recall would be zero) and we use more advanced metrics such as ROC AUC or the F1 score to more accurately reflect the performance of a classifier. A model with a high ROC AUC will also have a high accuracy, but the ROC AUC is a better representation of model performance.
+
+Not that we know the background of the data we are using and the metric to maximize, let's get into exploring the data. In this notebook, as mentioned previously, we will stick to the main data sources and simple models which we can build upon in future work.
 
 
 
 
-
-
-
-
-
-
-
-
-
-
-Once we have a grasp of the data (reading through the column descriptions helps immensely), we need to understand the metric by which our submission is judged. In this case, it is a common classification metric known as the Receiver Operating Characteristic Area Under the Curve (ROC AUC, also sometimes called AUROC).
-
-The ROC AUC may sound intimidating, but it is relatively straightforward once you can get your head around the two individual concepts. The Reciever Operating Characteristic (ROC) curve graphs the true positive rate versus the false positive rate:
 
 https://www.kaggle.com/willkoehrsen/start-here-a-gentle-introduction
 
