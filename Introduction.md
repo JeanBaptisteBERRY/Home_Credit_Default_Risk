@@ -1,8 +1,8 @@
 # INTRODUCTION
 
-Dans le notebook "Introduction-HCDR.ipynb", nous étudierons dans un premier temps, la compétition Machine Learning "Home Credit Default Risk". L'objectif de cette compétition est d'utiliser des données issues d'historiques de demandes de prêts pour prédire si un client va être capable de recouvrir ou non son prêt bancaire. Le premiers élément que l'on déduit assez rapidement est le fait qu'il s'agit d'un tâche standard de classification de ML supervisé :
+Dans le notebook "Introduction-HCDR.ipynb", nous étudierons dans un premier temps, la compétition Machine Learning "Home Credit Default Risk". L'objectif de cette compétition est d'utiliser des données issues d'historiques de demandes de prêts pour prédire si un client va être capable de rembourser ou non son prêt bancaire. Le premiers élément que l'on déduit assez rapidement est le fait qu'il s'agit d'un tâche standard de classification de ML supervisé :
 * **Supervisé :** les labels sont inclus dans les données d'entraînement et l'objectif est d'entraîner un modèle capable d'apprendre à prédire les labels à partir des features (variables; N.B : Features are the variables found in the given problem set that can strongly/sufficiently help us build an accurate predictive model.)
-* **Classification :** Le label est une variable binaire : O (sera capable de recouvrir son prêt dans les temps) et 1 (aura des difficultés à recouvrir le prêt).
+* **Classification :** Le label est une variable binaire : O (sera capable de rembourser son prêt dans les temps) et 1 (aura des difficultés à rembourser le prêt).
 
 Avant de commencer il convient de bien comprendre la différence entre un prêt et un crédit :
 #### Qu’est-ce qu’un prêt ?
@@ -24,11 +24,11 @@ Traditionnellement, le crédit est utilisé par les entreprises ou les particuli
 
 ### Data
 
-Les données sont fournies par Home Credit, un service dédié à fournir des prêts bancaires à une population non bancarisée. Réussir à prédire si un client sera capable de recouvrir ou aura des difficultés à recouvrir son prêt est un besoin commercial critique et Home Credit propose cette compétition pour voir quelles sortes de modèles la communauté ML peut mettre au point pour les accompagner et les aider dans leurs tâches.
+Les données sont fournies par Home Credit, un service dédié à fournir des prêts bancaires à une population non bancarisée. Réussir à prédire si un client sera capable de rembourser ou aura des difficultés à rembourser son prêt est un besoin commercial critique et Home Credit propose cette compétition pour voir quelles sortes de modèles la communauté ML peut mettre au point pour les accompagner et les aider dans leurs tâches.
 
 On rappelle que les 7 différents types de données sont :
 
-* **application_train/application_test:** Les principales données d'entraînement et de test avec des informations sur chaque prêt souscrit auprès d'Home Credit. Chaque prêt a sa propre ligne / donnée et est identifié grâce à la varaible SK_ID_CURR. Les données d'entraînement contienne la variable cible qui indique 0 si le prêt a été recouvert et 1 si le prêt ne l'a pas été.
+* **application_train/application_test:** Les principales données d'entraînement et de test avec des informations sur chaque prêt souscrit auprès d'Home Credit. Chaque prêt a sa propre ligne / donnée et est identifié grâce à la varaible SK_ID_CURR. Les données d'entraînement contienne la variable cible qui indique 0 si le prêt a été remboursé et 1 si le prêt ne l'a pas été.
 * **bureau:** Les données concernant les crédit précedemment souscrits par le client dans d'autres institutions financières. Chaque crédit préccédemment souscrit a sa ligne dans le fichier bureau mais attention : chaque crédit précédemment souscrit a sa propre ligne dans 'bureau' mais un prêt dans 'application' peut avoir plusieurs crédits souscrits précédemment (dans le passé).
 * **bureau_balance:** Les données mensuelles concernant les crédits souscrits précédemment. Chaque ligne correspond à la balance d'un mois d'un crédit précédent. On en déduit qu'un seul crédit précédemment souscrit peut avoir plusieurs lignes dans ce fichier, un pour chaque mois de la durée totale du crédit précédemment souscrit par le client.
 * **previous_application:** les souscriptions précédentes pour prêt à Home Credit des clients qui ont un prêt dans 'application'. Chaque prêt en cours dans 'application' peut avoir plusieurs prêts souscrits dans le passé. Chaque prêt souscrit dans le passé correspond à une ligne et est identifié par la variable SK_ID_PREV.
